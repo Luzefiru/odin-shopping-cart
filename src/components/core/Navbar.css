@@ -1,0 +1,80 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  align-items: center;
+  height: 72px;
+  background: linear-gradient(var(--primary-variant), var(--primary));
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.Navbar__logo {
+  height: 64px;
+  width: 224px;
+  cursor: pointer;
+  /* logo svg colorization */
+  background: linear-gradient(to top, #1e0b36, #ca3782);
+  -webkit-mask-image: url(../../assets/logo.svg);
+  mask-image: url(../../assets/logo.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.Navbar__list {
+  all: unset;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.Navbar__list__link {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  padding: 0 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.Navbar__list__link.active {
+  color: #a02364;
+}
+
+.Navbar__list__link.active::after {
+  --height: 5px;
+  content: '';
+  position: absolute;
+  bottom: calc(-1rem + var(--height)); /* padding & own thickness */
+  left: 0;
+  height: var(--height);
+  width: 100%;
+  background-color: #a02364;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.Navbar__cart {
+  margin-left: calc(
+    224px - 4rem
+  ); /* logo width - cart icon width (to center nav links) */
+  height: 2rem;
+  width: 4rem;
+}
+
+.Navbar__list__link,
+.Navbar__cart {
+  transition: 0.1s all ease-in;
+  cursor: pointer;
+}
+
+.Navbar__list__link:hover,
+.Navbar__cart:hover {
+  color: #a02364;
+  transform: scale(1.1);
+}
+
+.Navbar__list__link.active:hover {
+  transform: none;
+}
