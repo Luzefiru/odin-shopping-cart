@@ -29,7 +29,9 @@
 }
 
 .Navbar__list__link {
+  text-decoration: none;
   list-style-type: none;
+  color: black;
   display: flex;
   align-items: center;
   height: 70%;
@@ -39,6 +41,7 @@
 }
 
 .Navbar__list__link.active {
+  transition: 50ms all ease-in;
   color: #a02364;
 }
 
