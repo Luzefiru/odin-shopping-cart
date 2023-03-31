@@ -1,0 +1,33 @@
+header {
+  --navbar-height: 72px;
+  height: calc(100vh - var(--navbar-height));
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+
+.header__img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  opacity: 85%;
+  object-position: 0 -32px;
+}
+
+.header__cta {
+  position: relative;
+}
+
+.header__cta__caption {
+  text-transform: lowercase;
+  position: absolute;
+  right: 8%;
+  top: 58vh;
+  padding: 1rem 0 0 1rem;
+  font-size: max(1vw, 4rem);
+  font-weight: 600;
+  color: #fff9fc;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  rotate: -18deg;
+}
