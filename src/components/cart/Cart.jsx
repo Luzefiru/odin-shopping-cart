@@ -1,12 +1,16 @@
 import './Cart.css';
+import { useEffect } from 'react';
 
 const Cart = () => {
+  useEffect(() => {}, []);
+
   return (
     <div className="Cart">
       <svg
         className="Cart__close-btn"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
+        onClick={toggleCartSidebar}
       >
         <path
           fill="currentColor"
@@ -15,6 +19,10 @@ const Cart = () => {
       </svg>
     </div>
   );
+};
+
+export const toggleCartSidebar = () => {
+  document.querySelector('.Cart').classList.toggle('show');
 };
 
 export default Cart;

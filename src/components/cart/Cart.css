@@ -1,18 +1,38 @@
 .Cart {
-  display: none;
+  display: grid;
+  grid-template-areas:
+    'close'
+    'header'
+    'items'
+    'summary'
+    'checkout';
   background-color: white;
-  width: max(30%, 300px);
+  width: 0px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
-  display: grid;
+  opacity: 0;
+  transition: 350ms all ease-out;
+  overflow: hidden; /* this is important to hide the elements from taking space (not using display: none) */
+}
+
+.Cart.show {
+  opacity: 1;
+  width: max(30%, 300px);
 }
 
 .Cart__close-btn {
+  grid-area: close;
+  display: none;
+}
+
+.Cart.show .Cart__close-btn {
+  display: initial;
   cursor: pointer;
   margin: 1rem;
+  margin-right: 3rem;
   margin-left: auto;
   width: max(10%, 1.5rem);
   transition: 50ms all ease-in;
