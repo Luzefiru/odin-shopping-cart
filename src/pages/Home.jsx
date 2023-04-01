@@ -1,5 +1,5 @@
 import './Home.css';
-import HeaderImage from '../../assets/header-background.jpg';
+import HeaderImage from '../assets/header-background.jpg';
 
 const Home = () => {
   return (

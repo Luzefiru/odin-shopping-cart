@@ -42,7 +42,7 @@
 
 .Navbar__list__link.active {
   transition: 50ms all ease-in;
-  color: #a02364;
+  color: var(--hover-color);
 }
 
 .Navbar__list__link.active::after {
@@ -53,7 +53,7 @@
   left: 0;
   height: var(--height);
   width: 100%;
-  background-color: #a02364;
+  background-color: var(--hover-color);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -74,7 +74,7 @@
 
 .Navbar__list__link:hover,
 .Navbar__cart:hover {
-  color: #a02364;
+  color: var(--hover-color);
   transform: scale(1.1);
 }
 

@@ -1,0 +1,23 @@
+.Cart {
+  display: none;
+  background-color: white;
+  width: max(30%, 300px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
+  display: grid;
+}
+
+.Cart__close-btn {
+  cursor: pointer;
+  margin: 1rem;
+  margin-left: auto;
+  width: max(10%, 1.5rem);
+  transition: 50ms all ease-in;
+}
+
+.Cart__close-btn:hover {
+  color: var(--hover-color);
+}
