@@ -1,0 +1,46 @@
+.Catalog {
+  padding: 3rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+}
+
+.Catalog__card {
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  width: 272px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.Catalog__card:hover::after {
+  content: '';
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 0.5rem;
+  bottom: 0.75rem;
+  position: absolute;
+  background: url('../assets/cart-plus.svg') no-repeat center;
+  border-radius: 6px;
+}
+
+.Catalog__card__image {
+  width: 272px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.Catalog__card__name,
+.Catalog__card__price {
+  margin: 0.5rem;
+}
+
+.Catalog__card__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.Catalog__card__price::before {
+  content: '$';
+}
