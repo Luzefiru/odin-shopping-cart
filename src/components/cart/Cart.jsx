@@ -1,9 +1,6 @@
 import './Cart.css';
-import { useEffect } from 'react';
 
 const Cart = () => {
-  useEffect(() => {}, []);
-
   return (
     <div className="Cart">
       <svg
