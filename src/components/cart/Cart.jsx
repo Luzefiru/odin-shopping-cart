@@ -1,4 +1,5 @@
 import './Cart.css';
+import item1 from '../../assets/catalog/embellished-gown.jpg';
 
 const Cart = () => {
   return (
@@ -21,7 +22,32 @@ const Cart = () => {
         <span className="Cart__header__subtext">You have x items.</span>
       </div>
 
-      <div className="Cart__contents">hello world</div>
+      <div className="Cart__contents">
+        <div className="Cart__contents__item">
+          <img
+            alt="Embellished Gown"
+            src={item1}
+            className="Cart__contents__item__img"
+          ></img>
+          <div className="Cart__contents__item__details">
+            <div className="Cart__contents__item__details__name">
+              Cashmere Turtleneck Sweater
+            </div>
+            <div className="Cart__contents__item__details__price">1999.99</div>
+            <div className="Cart__contents__item__details__count">
+              <button className="Cart__contents__item__details__count__minus">
+                <span>-</span>
+              </button>
+              <div className="Cart__contents__item__details__count__total">
+                1
+              </div>
+              <button className="Cart__contents__item__details__count__plus">
+                <span>+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="Cart__checkout">
         <div className="Cart__checkout__summary">

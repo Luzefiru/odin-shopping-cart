@@ -52,6 +52,7 @@
   font-size: 1.5rem;
   letter-spacing: 4px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .Cart__header__subtext {
@@ -65,6 +66,90 @@
   display: none;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.Cart__contents__item {
+  margin-left: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 5rem;
+  gap: 1.5rem;
+}
+
+.Cart__contents__item__img {
+  object-fit: cover;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 8px;
+}
+
+.Cart__contents__item__details {
+  display: grid;
+  gap: 8px;
+}
+
+.Cart__contents__item__details__name {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Cart__contents__item__details__price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.Cart__contents__item__details__count {
+  display: flex;
+  outline: 2px solid black;
+  border-radius: 8px;
+  width: min-content;
+  font-weight: 700;
+}
+
+.Cart__contents__item__details__count__minus,
+.Cart__contents__item__details__count__plus {
+  cursor: pointer;
+  border: none;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.Cart__contents__item__details__count__minus {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.Cart__contents__item__details__count__plus {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.Cart__contents__item__details__count__minus:hover {
+  background-color: rgb(206, 55, 55);
+  color: white;
+}
+.Cart__contents__item__details__count__plus:hover {
+  background-color: rgb(32, 161, 32);
+  color: white;
+}
+
+.Cart__contents__item__details__count__total {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .Cart__checkout {
@@ -76,16 +161,18 @@
 }
 
 .Cart__checkout__summary__subtotal-title {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
 }
 
 .Cart__checkout__summary__subtotal-price {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.Cart__checkout__summary__subtotal-price::before {
+.Cart__checkout__summary__subtotal-price::before,
+.Cart__contents__item__details__price::before {
   content: '$';
 }
 
