@@ -1,12 +1,19 @@
 import './Catalog.css';
 import data from './Catalog.data';
 
-const Catalog = () => {
+const Catalog = (props) => {
   const items = Array.from(data);
 
   const generateCatalogItems = (arr) => {
+    let key = 0;
     return arr.map((i) => (
-      <div className="Catalog__card">
+      <div
+        key={key++}
+        className="Catalog__card"
+        onClick={() => {
+          props.cartAddItem({ name: i.name, price: i.price, image: i.image });
+        }}
+      >
         <img
           className="Catalog__card__image"
           alt={i.name}
