@@ -1,99 +1,30 @@
 import './Catalog.css';
 import data from './Catalog.data';
-import item1 from '../assets/catalog/embellished-gown.jpg';
-import item1Alt from '../assets/catalog/embellished-gown-alt.jpg';
 
 const Catalog = () => {
   const items = Array.from(data);
 
   const generateCatalogItems = (arr) => {
-    const items = [];
-    for (let i of arr) {
-      console.log(i);
-    }
+    return arr.map((i) => (
+      <div className="Catalog__card">
+        <img
+          className="Catalog__card__image"
+          alt={i.name}
+          src={i.image}
+          onMouseOver={(e) => {
+            e.target.src = i.imageAlt;
+          }}
+          onMouseOut={(e) => {
+            e.target.src = i.image;
+          }}
+        ></img>
+        <div className="Catalog__card__name">{i.name}</div>
+        <div className="Catalog__card__price">{i.price}</div>
+      </div>
+    ));
   };
 
-  generateCatalogItems(items);
-
-  return (
-    <section className="Catalog">
-      <div className="Catalog__card">
-        <img
-          className="Catalog__card__image"
-          alt="Embellished Gown"
-          src={item1}
-          onMouseOver={(e) => {
-            e.target.src = item1Alt;
-          }}
-          onMouseOut={(e) => {
-            e.target.src = item1;
-          }}
-        ></img>
-        <div className="Catalog__card__name">Embellished Gown</div>
-        <div className="Catalog__card__price">2599.99</div>
-      </div>
-      <div className="Catalog__card">
-        <img
-          className="Catalog__card__image"
-          alt="Embellished Gown"
-          src={item1}
-          onMouseOver={(e) => {
-            e.target.src = item1Alt;
-          }}
-          onMouseOut={(e) => {
-            e.target.src = item1;
-          }}
-        ></img>
-        <div className="Catalog__card__name">Embellished Gown</div>
-        <div className="Catalog__card__price">2599.99</div>
-      </div>
-      <div className="Catalog__card">
-        <img
-          className="Catalog__card__image"
-          alt="Embellished Gown"
-          src={item1}
-          onMouseOver={(e) => {
-            e.target.src = item1Alt;
-          }}
-          onMouseOut={(e) => {
-            e.target.src = item1;
-          }}
-        ></img>
-        <div className="Catalog__card__name">Embellished Gown</div>
-        <div className="Catalog__card__price">2599.99</div>
-      </div>
-      <div className="Catalog__card">
-        <img
-          className="Catalog__card__image"
-          alt="Embellished Gown"
-          src={item1}
-          onMouseOver={(e) => {
-            e.target.src = item1Alt;
-          }}
-          onMouseOut={(e) => {
-            e.target.src = item1;
-          }}
-        ></img>
-        <div className="Catalog__card__name">Embellished Gown</div>
-        <div className="Catalog__card__price">2599.99</div>
-      </div>
-      <div className="Catalog__card">
-        <img
-          className="Catalog__card__image"
-          alt="Embellished Gown"
-          src={item1}
-          onMouseOver={(e) => {
-            e.target.src = item1Alt;
-          }}
-          onMouseOut={(e) => {
-            e.target.src = item1;
-          }}
-        ></img>
-        <div className="Catalog__card__name">Embellished Gown</div>
-        <div className="Catalog__card__price">2599.99</div>
-      </div>
-    </section>
-  );
+  return <section className="Catalog">{generateCatalogItems(items)}</section>;
 };
 
 export default Catalog;

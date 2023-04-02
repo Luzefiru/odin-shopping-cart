@@ -12,6 +12,7 @@
   width: 272px;
   border-radius: 6px;
   position: relative;
+  overflow: hidden;
 }
 
 .Catalog__card:hover::after {
@@ -27,8 +28,11 @@
 
 .Catalog__card__image {
   width: 272px;
+  height: 380px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .Catalog__card__name,
