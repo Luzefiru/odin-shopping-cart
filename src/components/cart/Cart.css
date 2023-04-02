@@ -4,8 +4,9 @@
     'close'
     'header'
     'items'
-    'summary'
     'checkout';
+  grid-template-rows: 1fr 1fr 8fr 1fr;
+  justify-items: center;
   background-color: white;
   width: 0px;
   height: 100%;
@@ -29,7 +30,6 @@
 }
 
 .Cart.show .Cart__close-btn {
-  display: initial;
   cursor: pointer;
   margin: 1rem;
   margin-right: 3rem;
@@ -40,4 +40,26 @@
 
 .Cart__close-btn:hover {
   color: var(--hover-color);
+}
+
+.Cart__header {
+  grid-area: header;
+  display: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.Cart__header__subtext {
+  text-transform: initial;
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.Cart.show .Cart__close-btn,
+.Cart.show .Cart__header {
+  display: initial;
 }
