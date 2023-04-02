@@ -61,6 +61,12 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
+.Cart__contents {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .Cart__checkout {
   display: none;
   grid-area: checkout;
@@ -102,6 +108,7 @@
   display: initial;
 }
 
+.Cart.show .Cart__contents,
 .Cart.show .Cart__checkout {
   display: flex;
 }

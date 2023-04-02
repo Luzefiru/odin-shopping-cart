@@ -21,6 +21,8 @@ const Cart = () => {
         <span className="Cart__header__subtext">You have x items.</span>
       </div>
 
+      <div className="Cart__contents">hello world</div>
+
       <div className="Cart__checkout">
         <div className="Cart__checkout__summary">
           <div className="Cart__checkout__summary__subtotal-title">
