@@ -1,7 +1,79 @@
+import CartItem from './CartItem';
 import './Cart.css';
+import { useState, useEffect } from 'react';
 import item1 from '../../assets/catalog/embellished-gown.jpg';
 
 const Cart = () => {
+  const [items, setItems] = useState([]);
+
+  const cartAddItem = ({ name, price, image }) => {
+    setItems([...items, { name, price, src: image }]);
+  };
+
+  const cartRemoveItem = ({ name, price, image }) => {
+    items.splice(items.indexOf({ name, price, src: image }), 1);
+    // force trigger a re-render
+    setItems([...items]);
+  };
+
+  useEffect(() => {
+    setItems([{ name: 'Emellished Potato', price: '6999.99', src: item1 }]);
+  }, []);
+
+  const cartCountItem = ({ name, price, image }) => {
+    const count = items.filter((e) => {
+      return e.name === name && e.price === price && e.src === image;
+    }).length;
+    return count;
+  };
+
+  const generateCartContents = () => {
+    const uniqueItems = [];
+    for (let i of items) {
+      let flag = false;
+      for (let j of uniqueItems) {
+        // don't add the item in uniqueItems if it already matches an object in uniqueItems
+        if (i.name === j.name && i.price === j.price && i.src === j.src) {
+          flag = true;
+        }
+      }
+      // if the item is unique
+      if (flag === false) {
+        uniqueItems.push(i);
+      }
+    }
+
+    const cartItemCards = uniqueItems.map((item) => {
+      return (
+        <CartItem
+          src={item.src}
+          name={item.name}
+          price={item.price}
+          count={cartCountItem({
+            name: item.name,
+            price: item.price,
+            image: item.src,
+          })}
+          handlePlus={() => {
+            cartAddItem({
+              name: item.name,
+              price: item.price,
+              image: item.src,
+            });
+          }}
+          handleMinus={() => {
+            cartRemoveItem({
+              name: item.name,
+              price: item.price,
+              image: item.src,
+            });
+          }}
+        />
+      );
+    });
+    return cartItemCards;
+  };
+
   return (
     <div className="Cart">
       <svg
@@ -22,32 +94,7 @@ const Cart = () => {
         <span className="Cart__header__subtext">You have x items.</span>
       </div>
 
-      <div className="Cart__contents">
-        <div className="Cart__contents__item">
-          <img
-            alt="Embellished Gown"
-            src={item1}
-            className="Cart__contents__item__img"
-          ></img>
-          <div className="Cart__contents__item__details">
-            <div className="Cart__contents__item__details__name">
-              Cashmere Turtleneck Sweater
-            </div>
-            <div className="Cart__contents__item__details__price">1999.99</div>
-            <div className="Cart__contents__item__details__count">
-              <button className="Cart__contents__item__details__count__minus">
-                <span>-</span>
-              </button>
-              <div className="Cart__contents__item__details__count__total">
-                1
-              </div>
-              <button className="Cart__contents__item__details__count__plus">
-                <span>+</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="Cart__contents">{generateCartContents()}</div>
 
       <div className="Cart__checkout">
         <div className="Cart__checkout__summary">
