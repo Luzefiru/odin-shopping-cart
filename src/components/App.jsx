@@ -80,6 +80,14 @@ function App() {
     return cartItemCards;
   };
 
+  const getSubtotal = () => {
+    if (items.length === 0) {
+      return 0;
+    } else {
+      return items.reduce((prev, cur, ind) => prev + items[ind].price, 0);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -92,7 +100,11 @@ function App() {
         <Route path="/about" element={<div>About</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
       </Routes>
-      <Cart cartContents={generateCartContents()} />
+      <Cart
+        cartContents={generateCartContents()}
+        numItems={items.length}
+        subtotal={getSubtotal().toFixed(2)}
+      />
     </>
   );
 }

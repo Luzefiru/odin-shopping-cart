@@ -18,7 +18,9 @@ const Cart = (props) => {
       <div className="Cart__header">
         Your Bag
         <br />
-        <span className="Cart__header__subtext">You have x items.</span>
+        <span className="Cart__header__subtext">
+          You have {props.numItems} items.
+        </span>
       </div>
 
       <div className="Cart__contents">{props.cartContents}</div>
@@ -28,7 +30,9 @@ const Cart = (props) => {
           <div className="Cart__checkout__summary__subtotal-title">
             Subtotal
           </div>
-          <div className="Cart__checkout__summary__subtotal-price">1999.99</div>
+          <div className="Cart__checkout__summary__subtotal-price">
+            {props.subtotal}
+          </div>
         </div>
 
         <button type="button" className="Cart__checkout__button">
