@@ -75,11 +75,26 @@
 }
 
 .Cart__checkout__summary__subtotal-price {
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .Cart__checkout__summary__subtotal-price::before {
   content: '$';
+}
+
+.Cart__checkout__button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--hover-color);
+  padding: 0.8rem 2.25rem;
+  color: rgb(255, 248, 251);
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.Cart__checkout__button:hover {
+  background-color: #691d44;
 }
 
 .Cart.show .Cart__close-btn,
