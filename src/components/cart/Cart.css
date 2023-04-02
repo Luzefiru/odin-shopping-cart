@@ -5,7 +5,7 @@
     'header'
     'items'
     'checkout';
-  grid-template-rows: 1fr 1fr 8fr 1fr;
+  grid-template-rows: 1fr 1fr 7fr 1fr;
   justify-items: center;
   background-color: white;
   width: 0px;
@@ -13,10 +13,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: 350ms all ease-out;
   overflow: hidden; /* this is important to hide the elements from taking space (not using display: none) */
+  position: fixed;
+  z-index: 3;
 }
 
 .Cart.show {
@@ -59,7 +61,32 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
+.Cart__checkout {
+  display: none;
+  grid-area: checkout;
+  align-self: start;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.Cart__checkout__summary__subtotal-title {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+
+.Cart__checkout__summary__subtotal-price {
+  font-weight: 600;
+}
+
+.Cart__checkout__summary__subtotal-price::before {
+  content: '$';
+}
+
 .Cart.show .Cart__close-btn,
 .Cart.show .Cart__header {
   display: initial;
+}
+
+.Cart.show .Cart__checkout {
+  display: flex;
 }

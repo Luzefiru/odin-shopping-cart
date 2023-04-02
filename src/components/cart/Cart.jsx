@@ -26,7 +26,7 @@ const Cart = () => {
           <div className="Cart__checkout__summary__subtotal-title">
             Subtotal
           </div>
-          <div className="Cart__checkout__summary__subtotal-price">$1999</div>
+          <div className="Cart__checkout__summary__subtotal-price">1999.99</div>
         </div>
 
         <button type="button" className="Cart__checkout__button">
