@@ -35,7 +35,13 @@ const Cart = (props) => {
           </div>
         </div>
 
-        <button type="button" className="Cart__checkout__button">
+        <button
+          onClick={() => {
+            alert('Checkout has not been implemented yet.');
+          }}
+          type="button"
+          className="Cart__checkout__button"
+        >
           Checkout
         </button>
       </div>
