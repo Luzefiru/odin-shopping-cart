@@ -8,6 +8,8 @@
 .About__left__header {
   text-transform: capitalize;
   letter-spacing: 1px;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .About__left__header--highlight {
@@ -19,7 +21,7 @@
 }
 
 .About__left__body {
-  line-height: 1.9rem;
+  line-height: 2rem;
 }
 
 .About__right {
