@@ -1,12 +1,13 @@
-import "./App.css";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./core/Navbar";
-import Home from "../pages/Home";
-import Catalog from "../pages/Catalog";
-import About from "../pages/About";
-import Cart from "./cart/Cart";
-import CartItem from "./cart/CartItem";
+import './App.css';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './core/Navbar';
+import Home from '../pages/Home';
+import Catalog from '../pages/Catalog';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import Cart from './cart/Cart';
+import CartItem from './cart/CartItem';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -99,7 +100,7 @@ function App() {
           element={<Catalog cartAddItem={cartAddItem} />}
         />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<div>Contact</div>} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Cart
         cartContents={generateCartContents()}

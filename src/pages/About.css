@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   padding: 8rem;
   gap: 5rem;
+  align-items: center;
 }
 
 .About__left__header {
@@ -21,7 +22,7 @@
 }
 
 .About__left__body {
-  line-height: 2rem;
+  line-height: 1.75rem;
 }
 
 .About__right {
