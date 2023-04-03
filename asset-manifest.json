@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/odin-shopping-cart/static/css/main.33748724.css",
+    "main.js": "/odin-shopping-cart/static/js/main.d1197cdf.js",
+    "static/media/about.jpg": "/odin-shopping-cart/static/media/about.3e357103511fc4291fc1.jpg",
+    "static/media/embellished-gown-alt.jpg": "/odin-shopping-cart/static/media/embellished-gown-alt.c6de1b5a7a5f01749b96.jpg",
+    "static/media/embellished-gown.jpg": "/odin-shopping-cart/static/media/embellished-gown.7065254f49d04f1c7251.jpg",
+    "static/media/velvet-crop-top-set-alt.jpg": "/odin-shopping-cart/static/media/velvet-crop-top-set-alt.b61dc15e193cbe6f513b.jpg",
+    "static/media/velvet-crop-top-set.jpg": "/odin-shopping-cart/static/media/velvet-crop-top-set.47ce5e030754fcac8693.jpg",
+    "static/media/header-background.jpg": "/odin-shopping-cart/static/media/header-background.26701590aebda67c007f.jpg",
+    "static/media/sequin-mini-dress-alt.jpg": "/odin-shopping-cart/static/media/sequin-mini-dress-alt.4c553e1eccc2d0661446.jpg",
+    "static/media/embellished-velvet-dress-alt.jpg": "/odin-shopping-cart/static/media/embellished-velvet-dress-alt.2cdbe0a1f53ab6657abd.jpg",
+    "static/media/beaded-fringe-dress-alt.jpg": "/odin-shopping-cart/static/media/beaded-fringe-dress-alt.7ce132e4617ce4a9223a.jpg",
+    "static/media/embroidered-maxi-dress-alt.jpg": "/odin-shopping-cart/static/media/embroidered-maxi-dress-alt.2d712a8f8bb21f695e04.jpg",
+    "static/media/embellished-crop-top.jpg": "/odin-shopping-cart/static/media/embellished-crop-top.929d4d3d7dde5d04111c.jpg",
+    "static/media/embellished-crop-top-alt.jpg": "/odin-shopping-cart/static/media/embellished-crop-top-alt.4fe7e43c51a46efd8445.jpg",
+    "static/media/satin-wide-leg-pants-alt.jpg": "/odin-shopping-cart/static/media/satin-wide-leg-pants-alt.220ff5dbd55975452e6e.jpg",
+    "static/media/embellished-velvet-dress.jpg": "/odin-shopping-cart/static/media/embellished-velvet-dress.28bf07dd091b1d1be142.jpg",
+    "static/media/cashmere-turtleneck-sweater-alt.jpg": "/odin-shopping-cart/static/media/cashmere-turtleneck-sweater-alt.bcb8a8ee7938291ae3f6.jpg",
+    "static/media/embroidered-maxi-dress.jpg": "/odin-shopping-cart/static/media/embroidered-maxi-dress.a3455f4e98ae699b0eab.jpg",
+    "static/media/satin-wide-leg-pants.jpg": "/odin-shopping-cart/static/media/satin-wide-leg-pants.8e1a9b276057e2f5be99.jpg",
+    "static/media/fur-trimmed-coat.jpg": "/odin-shopping-cart/static/media/fur-trimmed-coat.b9e71f5d236a73f461fb.jpg",
+    "static/media/beaded-fringe-dress.jpg": "/odin-shopping-cart/static/media/beaded-fringe-dress.5222f25b2e641374a515.jpg",
+    "static/media/fur-trimmed-coat-alt.jpg": "/odin-shopping-cart/static/media/fur-trimmed-coat-alt.2bbeccfbf03245cb1d53.jpg",
+    "static/media/sequin-mini-dress.jpg": "/odin-shopping-cart/static/media/sequin-mini-dress.ce26c87a216e9fc78b8d.jpg",
+    "static/media/lace-sheath-dress-alt.jpg": "/odin-shopping-cart/static/media/lace-sheath-dress-alt.89daf372066937184b72.jpg",
+    "static/media/lace-sheath-dress.jpg": "/odin-shopping-cart/static/media/lace-sheath-dress.77e112f926ae38a6b66e.jpg",
+    "static/media/cashmere-turtleneck-sweater.jpg": "/odin-shopping-cart/static/media/cashmere-turtleneck-sweater.b8c5e49a52bb408efc62.jpg",
+    "static/media/logo.svg": "/odin-shopping-cart/static/media/logo.d154b54972c8481f0702.svg",
+    "index.html": "/odin-shopping-cart/index.html",
+    "static/media/cart-plus.svg": "/odin-shopping-cart/static/media/cart-plus.ebedbdb17ffaffd081c4.svg",
+    "main.33748724.css.map": "/odin-shopping-cart/static/css/main.33748724.css.map",
+    "main.d1197cdf.js.map": "/odin-shopping-cart/static/js/main.d1197cdf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33748724.css",
+    "static/js/main.d1197cdf.js"
+  ]
+}
