@@ -1,0 +1,27 @@
+.About {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8rem;
+  gap: 5rem;
+}
+
+.About__left__header--highlight {
+  color: var(--hover-color);
+}
+
+.About__left__body--bold {
+  font-weight: bold;
+}
+
+.About__left__body {
+  line-height: 1.9rem;
+}
+
+.About__right {
+  width: 100%;
+}
+
+.About__right__img {
+  width: 100%;
+  border-radius: 16px;
+}
