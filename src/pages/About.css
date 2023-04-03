@@ -5,6 +5,11 @@
   gap: 5rem;
 }
 
+.About__left__header {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
 .About__left__header--highlight {
   color: var(--hover-color);
 }
